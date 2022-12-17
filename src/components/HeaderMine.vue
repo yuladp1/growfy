@@ -1,32 +1,36 @@
 <template>
   <header class="header">
-  <div class= "header__container _container" v-bind:class="{ 'icon-mobile-view': mobileNav }">
-  <a class="header__logo"><img src="../assets/logo.svg" alt="growfy-logo" class="">  </a>
-  <nav class="header__menu menu">
-    <ul class="menu__list" v-show="!mobile">
-      <li class="menu__item"><a href="" class="menu__link">Home</a></li>
-      <li class="menu__item"><a href="" class="menu__link">Product</a></li>
-      <li class="menu__item"><a href="" class="menu__link">Pricing</a></li>
-      <li class="menu__item"><a href="" class="menu__link">Contact</a></li>
-    </ul>
-   </nav>
- 
-   <div class="header__cart cart">
-    <span class="cart__text">Cart</span>
-    <span class="cart__amount">0</span>
-  </div>
-  <a class="header__button button" href="">Get started</a>
-  <div class="icon" v-on:click="toggleMobileNav" v-show="mobile">
-   </div>
-   </div>
+    <div
+      class="header__container _container"
+      v-bind:class="{ 'icon-mobile-view': mobileNav }"
+    >
+      <a class="header__logo"
+        ><img src="../assets/logo.svg" alt="growfy-logo" class="" />
+      </a>
+      <nav class="header__menu menu">
+        <ul class="menu__list" v-show="!mobileNav">
+          <li class="menu__item"><a href="" class="menu__link">Home</a></li>
+          <li class="menu__item"><a href="" class="menu__link">Product</a></li>
+          <li class="menu__item"><a href="" class="menu__link">Pricing</a></li>
+          <li class="menu__item"><a href="" class="menu__link">Contact</a></li>
+        </ul>
+      </nav>
 
-   <ul class="dropdown-nav" v-show="mobileNav">
-        <li class="dropdown-nav-link">Home</li>
-        <li class="dropdown-nav-link">Product</li>
-        <li class="dropdown-nav-link">Pricing</li>
-        <li class="dropdown-nav-link">Services</li>
-      </ul>
-</header>
+      <div class="header__cart cart">
+        <span class="cart__text">Cart</span>
+        <span class="cart__amount">0</span>
+      </div>
+      <a class="header__button button" href="">Get started</a>
+      <div class="icon" v-on:click="toggleMobileNav" v-show="mobileNav"></div>
+    </div>
+
+    <ul class="dropdown-nav" v-show="isBurgerClicked">
+      <li class="dropdown-nav-link">Home</li>
+      <li class="dropdown-nav-link">Product</li>
+      <li class="dropdown-nav-link">Pricing</li>
+      <li class="dropdown-nav-link">Services</li>
+    </ul>
+  </header>
 </template>
 
 <script>
@@ -35,26 +39,29 @@ export default {
   data() {
     return {
       scrollPosition: null,
-      mobile: false,
-      mobileNav: null,
+      isBurgerClicked: false,
+      mobileNav: true,
       windowWidth: null,
     };
+  },
+  mounted() {
+    this.checkScreen();
   },
   created() {
     window.addEventListener("resize", this.checkScreen);
   },
   methods: {
     toggleMobileNav() {
-      this.mobileNav = !this.mobileNav;
+      this.isBurgerClicked = !this.isBurgerClicked;
     },
     checkScreen() {
       this.windowWidth = window.innerWidth;
       if (this.windowWidth <= 798) {
-        this.mobile = true;
+        this.mobileNav = true;
         return;
       } else {
-        this.mobile = false;
         this.mobileNav = false;
+        this.isBurgerClicked = false;
         return;
       }
     },
@@ -65,16 +72,16 @@ export default {
 <style>
 /*-----Header-----*/
 .icon {
-   background-image: url('../assets/burger-menu.png');
-   width: 30px;
-   height: 30px;
+  background-image: url("../assets/burger-menu.png");
+  width: 30px;
+  height: 30px;
   background-size: cover;
 }
 .icon-mobile-view {
   display: flex;
   justify-content: space-between;
- }
- .header {
+}
+.header {
   position: relative;
   width: 100%;
   height: 100%;
@@ -82,90 +89,103 @@ export default {
   min-height: 100%;
   display: flex;
   flex-direction: column;
- }
-  .header__container {
-      display: flex;
-      align-items: center;
-    width: 100%;
-    margin-top: 32px;
-    justify-content: flex-end;
-    column-gap: 35px;
 }
- .header__menu {
+.header__container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 32px;
+  justify-content: flex-end;
+  column-gap: 35px;
+}
+.header__menu {
   height: 100%;
   flex: 1 1 auto;
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu__list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 35px;
+}
+@media (max-width: 991.98px) {
+  .menu__list {
+    column-gap: 25px;
   }
- 
- .menu__list {
-   display: flex;
-   align-items: center;
-   justify-content: flex-end;
-     gap: 35px;
+}
+@media (max-width: 850px) {
+  .header__container {
+    column-gap: 20px;
   }
-  @media (max-width: 992px) {
-    .menu__list {
-      column-gap: 25px;
-    }
-    }
-    @media (max-width: 850px) {
-    .menu__list {
-      column-gap: 10px;
-    }
-    }
- .menu__link {
+  .menu__list {
+    column-gap: 10px;
+  }
+}
+@media (max-width: 560px) {
+  .header__container {
+    column-gap: 10px;
+  }
+  .header__logo {
+    width: 40px;
+    overflow: hidden;
+  }
+}
+.menu__link {
   font-weight: 300;
-font-size: 16px;
-line-height: 26px;
-display: flex;
-align-items: center;
-color: #FFFFFF;
-  }
-  .menu__link:hover {
-    text-shadow: 5px 5px #558ABB;
-  }
-   .dropdown-nav {
-    margin: 0;
-    display: flex;
-   flex-direction: column;
-    align-items: flex-start;
-    align-content: space-around;
-    position: fixed;
-      width: 120px;
-         top: 80px;
-      right: 0;
-      padding: 30px 0 30 20px;
-      z-index: 50;
-    }
-    .dropdown-nav-link {
-      color: white;
-      font-size: 16px;
-      padding: 10px;
-    }
+  font-size: 16px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+.menu__link:hover {
+  text-shadow: 5px 5px #558abb;
+}
+.dropdown-nav {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: space-around;
+  position: fixed;
+  width: 120px;
+  top: 90px;
+  right: 10px;
+  overflow: auto;
+  background: black;
+  z-index: 1;
+}
+.dropdown-nav-link {
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+}
 .cart {
   display: flex;
   gap: 5px;
 }
 .cart__text {
   font-weight: 300;
-font-size: 17.6px;
-line-height: 28px;
-display: flex;
-align-items: center;
-letter-spacing: 0.96px;
+  font-size: 17.6px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.96px;
 }
 .cart__amount {
   background: rgba(129, 129, 139, 0.3);
   border-radius: 50%;
   font-weight: 500;
-font-size: 14px;
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: 0.96px;
-height: 30px;
-    width: 30px;
-    justify-content: center;
- }
- </style>
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.96px;
+  height: 30px;
+  width: 30px;
+  justify-content: center;
+}
+</style>
