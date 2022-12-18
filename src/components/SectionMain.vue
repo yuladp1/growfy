@@ -59,7 +59,7 @@ export default {
 
 <style>
 .page__main {
-  margin-top: 65px;
+  margin-top: 160px;
 }
 .page__main-wrapper {
   margin-top: 65px;
@@ -84,45 +84,19 @@ export default {
 }
 .page__main-content-title {
   font-weight: 500;
-  font-size: 51.2px;
-  line-height: 61px;
+  font-size: 3.2rem;
+  line-height: 1.1718;
   color: white;
   max-width: 520px;
 }
-@media (max-width: 991.98px) {
-  .page__main-content-title {
-    font-size: 44px;
-  }
-}
-@media (max-width: 767.98px) {
-  .page__main-content {
-    margin: 0 0 20px 0;
-  }
-  .page__main-content-title {
-    font-size: 32px;
-  }
-  .page__main-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-@media (max-width: 400px) {
-  .page__main-content-buttons {
-    display: flex;
-    column-gap: 10px;
-  }
-  .page__main-content-buttons a {
-    font-size: 12px;
-    padding: 10px 20px;
-  }
-}
+
 .page__main-content-title:not(:last-child) {
   margin-bottom: 32px;
 }
 .page__main-content-text {
   font-weight: 300;
-  font-size: 18px;
-  line-height: 27px;
+  font-size: 1.125rem;
+  line-height: 1.5;
   max-width: 491px;
 }
 .page__main-content-text:not(:last-child) {
@@ -155,5 +129,44 @@ export default {
 }
 .page__main-images-image3 {
   border-radius: 241.906px 0px 241.906px 241.906px;
+}
+@media (max-width: 991.98px) {
+  .page__main-content-title {
+    font-size: 2.75rem;
+  }
+}
+@media (max-width: 850px) {
+  .page__main-content-buttons {
+    column-gap: 10px;
+    margin: 0 auto;
+  }
+  .page__main-content-buttons a {
+    font-size: 1.3rem;
+    padding: 10px 20px;
+    letter-spacing: 0.1px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page__main-content {
+    margin: 0 0 20px 0;
+  }
+  .page__main-content-title {
+    font-size: 2rem;
+  }
+  .page__main-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 400px) {
+  .page__main-content-buttons {
+    column-gap: 10px;
+    margin: 0 auto;
+  }
+  .page__main-content-buttons a {
+    font-size: 1.3rem;
+    padding: 8px 20px;
+    letter-spacing: 0.1px;
+  }
 }
 </style>

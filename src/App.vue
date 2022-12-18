@@ -58,24 +58,15 @@ body {
   transition: all 0.5s;
 }
 .button-dark {
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 2px;
-  color: #ffffff;
-  padding: 16px 30px;
   background: rgba(129, 129, 139, 0.2);
   border: 2px solid rgba(129, 129, 139, 0.2);
-  border-radius: 50px;
-  flex: 0 0 auto;
-  transition: all 0.5s;
-  background: rgba(129, 129, 139, 0.2);
 }
 .button:hover {
   background: #032c57;
   border: 2px solid white;
 }
 .button-dark:hover {
-  background: #98bfe9;
+  background: #01070e;
   border: 2px solid white;
 }
 /*--------------------*/

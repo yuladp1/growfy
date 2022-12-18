@@ -82,13 +82,14 @@ export default {
   justify-content: space-between;
 }
 .header {
-  position: relative;
+  position: fixed;
   width: 100%;
-  height: 100%;
-  margin-top: 32px;
-  min-height: 100%;
+  height: 116px;
+  padding: 32px 0;
   display: flex;
   flex-direction: column;
+  background: black;
+  z-index: 100;
 }
 .header__container {
   display: flex;
@@ -135,7 +136,7 @@ export default {
 }
 .menu__link {
   font-weight: 300;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 26px;
   display: flex;
   align-items: center;
@@ -157,10 +158,13 @@ export default {
   overflow: auto;
   background: black;
   z-index: 1;
+  border: 2px solid white;
+  border-radius: 10%;
+  font-weight: 500;
 }
 .dropdown-nav-link {
   color: white;
-  font-size: 18px;
+  font-size: 1.4rem;
   padding: 10px;
 }
 .cart {
@@ -169,8 +173,8 @@ export default {
 }
 .cart__text {
   font-weight: 300;
-  font-size: 17.6px;
-  line-height: 28px;
+  font-size: 1.1rem;
+  line-height: 1.59;
   display: flex;
   align-items: center;
   letter-spacing: 0.96px;
@@ -179,7 +183,7 @@ export default {
   background: rgba(129, 129, 139, 0.3);
   border-radius: 50%;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875rem;
   display: flex;
   align-items: center;
   text-align: center;
