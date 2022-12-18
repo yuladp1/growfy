@@ -2,10 +2,10 @@
   <section class="page__main">
     <div class="page__main-wrapper _container">
       <div class="page__main-content">
-        <div class="page__main-content-title">
+        <div class="page__main-content-title content-title">
           Marketing solutions that grow your business.
         </div>
-        <div class="page__main-content-text">
+        <div class="page__main-content-text content-text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, suspendisse varius enim
           in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor.
         </div>
@@ -82,24 +82,12 @@ export default {
   left: -30px;
   height: 122px;
 }
-.page__main-content-title {
-  font-weight: 500;
-  font-size: 3.2rem;
-  line-height: 1.1718;
-  color: white;
-  max-width: 520px;
-}
 
-.page__main-content-title:not(:last-child) {
+.content-title:not(:last-child) {
   margin-bottom: 32px;
 }
-.page__main-content-text {
-  font-weight: 300;
-  font-size: 1.125rem;
-  line-height: 1.5;
-  max-width: 491px;
-}
-.page__main-content-text:not(:last-child) {
+
+.content-text:not(:last-child) {
   margin-bottom: 32px;
 }
 .page__main-content-buttons {
@@ -131,7 +119,7 @@ export default {
   border-radius: 241.906px 0px 241.906px 241.906px;
 }
 @media (max-width: 991.98px) {
-  .page__main-content-title {
+  .content-title {
     font-size: 2.75rem;
   }
 }
@@ -150,7 +138,7 @@ export default {
   .page__main-content {
     margin: 0 0 20px 0;
   }
-  .page__main-content-title {
+  .content-title {
     font-size: 2rem;
   }
   .page__main-wrapper {

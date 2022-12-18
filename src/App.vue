@@ -2,19 +2,24 @@
   <div class="wrapper">
     <HeaderMine />
     <SectionMine />
-    <footer class="footer">footer</footer>
+    <SectionClients />
+    <SectionServices />
   </div>
 </template>
 
 <script>
 import HeaderMine from "./components/HeaderMine.vue";
 import SectionMine from "./components/SectionMain.vue";
+import SectionClients from "./components/SectionClients.vue";
+import SectionServices from "./components/SectionServices.vue";
 
 export default {
   name: "App",
   components: {
     HeaderMine,
     SectionMine,
+    SectionClients,
+    SectionServices,
   },
 };
 </script>
@@ -68,6 +73,19 @@ body {
 .button-dark:hover {
   background: #01070e;
   border: 2px solid white;
+}
+.content-title {
+  font-weight: 500;
+  font-size: 3.2rem;
+  line-height: 1.1718;
+  color: white;
+  max-width: 520px;
+}
+.content-text {
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  max-width: 491px;
 }
 /*--------------------*/
 
