@@ -88,7 +88,7 @@ export default {
   padding: 32px 0;
   display: flex;
   flex-direction: column;
-  background: black;
+  background: rgba(0, 0, 0, 0.8);
   z-index: 100;
 }
 .header__container {
@@ -140,11 +140,13 @@ export default {
   top: 90px;
   right: 10px;
   overflow: auto;
-  background: black;
+  background: rgba(0, 0, 0, 0.8);
   z-index: 1;
-  border: 2px solid white;
   border-radius: 10%;
   font-weight: 500;
+  height: 100vh;
+  padding-top: 30px;
+  margin-top: 25px;
 }
 .dropdown-nav-link {
   color: white;
