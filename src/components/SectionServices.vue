@@ -2,7 +2,7 @@
   <section class="page__services services">
     <div class="services__container _container">
       <div class="services__content">
-        <a href="" class="services__content-button-top">services</a>
+        <a href="" class="services__content-button-top button-top">services</a>
         <div class="services__content-title content-title">Services we offer</div>
         <div class="services__content-text content-text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, suspendisse varius enim
@@ -85,25 +85,7 @@ export default {
   align-items: flex-start;
   justify-content: center;
 }
-.services__content-button-top {
-  color: #9c9c9c;
-  font-weight: 300;
-  font-size: 10.8px;
-  line-height: 17px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  padding: 11px 19px;
-  border: 1px solid rgba(129, 129, 139, 0.2);
-  border-radius: 12px;
-  transition: all 0.5s;
-  display: inline-block;
-  margin-bottom: 19px;
-}
-.services__content-button-top:hover {
-  background: black;
-  border: 1px solid white;
-  color: white;
-}
+
 .services__content-title {
   max-width: 433.31px;
 }

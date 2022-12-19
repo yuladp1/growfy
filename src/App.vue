@@ -4,6 +4,9 @@
     <SectionMine />
     <SectionClients />
     <SectionServices />
+    <SectionMarketing />
+    <SectionStatistics />
+    <SectionFeedback />
   </div>
 </template>
 
@@ -12,7 +15,9 @@ import HeaderMine from "./components/HeaderMine.vue";
 import SectionMine from "./components/SectionMain.vue";
 import SectionClients from "./components/SectionClients.vue";
 import SectionServices from "./components/SectionServices.vue";
-
+import SectionMarketing from "./components/SectionMarketing.vue";
+import SectionStatistics from "./components/SectionStatistics.vue";
+import SectionFeedback from "./components/SectionFeedback.vue";
 export default {
   name: "App",
   components: {
@@ -20,6 +25,9 @@ export default {
     SectionMine,
     SectionClients,
     SectionServices,
+    SectionMarketing,
+    SectionStatistics,
+    SectionFeedback,
   },
 };
 </script>
@@ -86,6 +94,25 @@ body {
   font-size: 1.125rem;
   line-height: 1.5;
   max-width: 491px;
+}
+.button-top {
+  color: #9c9c9c;
+  font-weight: 300;
+  font-size: 10.8px;
+  line-height: 17px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 11px 19px;
+  border: 1px solid rgba(129, 129, 139, 0.2);
+  border-radius: 12px;
+  transition: all 0.5s;
+  display: inline-block;
+  margin-bottom: 19px;
+}
+.button-top:hover {
+  background: black;
+  border: 1px solid white;
+  color: white;
 }
 /*--------------------*/
 
