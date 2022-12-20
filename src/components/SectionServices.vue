@@ -111,6 +111,12 @@ export default {
   align-items: flex-start;
   border-radius: 30px;
 }
+
+.services__item:hover {
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(235, 240, 244, 0.2) inset;
+  -moz-box-shadow: 0px 5px 10px 2px rgba(235, 240, 244, 0.2) inset;
+  box-shadow: 0px 5px 10px 2px rgba(235, 240, 244, 0.2) inset;
+}
 .services__item-icon {
   display: inline-block;
 }

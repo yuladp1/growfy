@@ -55,16 +55,11 @@ export default {
 </script>
 
 <style>
-.page__statistics {
-}
-.statistics {
-}
 .statistics__wrapper {
   display: flex;
   column-gap: 32px;
   flex-wrap: nowrap;
 }
-
 .statistics__items {
   display: flex;
   column-gap: 32px;
@@ -86,16 +81,28 @@ export default {
   flex-direction: column;
   justify-content: center;
 }
-.statistics__title {
+
+.statistics__item:hover {
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(235, 240, 244, 0.2) inset;
+  -moz-box-shadow: 0px 5px 10px 2px rgba(235, 240, 244, 0.2) inset;
+  box-shadow: 0px 5px 10px 2px rgba(235, 240, 244, 0.2) inset;
 }
-.content-title {
+.statistics__image > img {
+  object-fit: cover;
+  width: 100%;
 }
-.statistics__image {
-}
+
 @media (max-width: 1190px) {
   .statistics__wrapper {
     flex-direction: column;
     column-gap: 32px;
+  }
+  .statistics__image {
+    margin-top: 32px;
+  }
+  .statistics__image > img {
+    object-fit: cover;
+    width: 50%;
   }
 }
 </style>

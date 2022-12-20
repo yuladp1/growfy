@@ -101,6 +101,9 @@ export default {
 </script>
 
 <style>
+.page__feedback {
+  padding-bottom: 96px;
+}
 .feedback__content {
   display: flex;
   justify-content: space-between;
@@ -108,8 +111,15 @@ export default {
   padding: 192px 0 64px 0;
 }
 
-.feedback__content-title {
-  max-width: 768px;
+.feedback__content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback__content-title,
+.feedback__content-text,
+.feedback__content-button-top {
+  max-width: fit-content;
 }
 
 .feedback__items {
@@ -117,13 +127,17 @@ export default {
   gap: 48px;
 }
 .feedback__item {
-  flex: 0 1 33.3333%;
+  padding: 64px 50px;
   background: rgba(129, 129, 139, 0.1);
   border-radius: 30px;
-  padding: 64px 40px;
 }
 .feedback__item > *:not(:last-child) {
   margin-bottom: 34px;
+}
+.feedback__item:hover {
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(235, 240, 244, 0.2) inset;
+  -moz-box-shadow: 0px 5px 10px 2px rgba(235, 240, 244, 0.2) inset;
+  box-shadow: 0px 5px 10px 2px rgba(235, 240, 244, 0.2) inset;
 }
 .feedback__item-customer {
   display: flex;
@@ -162,5 +176,24 @@ export default {
 }
 .feedback__item-rate > img:not(:last-child) {
   padding-right: 5px;
+}
+@media (max-width: 1080px) {
+  .feedback__items {
+    flex-direction: column;
+  }
+  .feedback__content {
+    padding-top: 80px;
+  }
+}
+@media (max-width: 690px) {
+  .feedback__content {
+    flex-direction: column;
+    gap: 32px;
+    align-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .feedback__content > a {
+    align-self: flex-start;
+  }
 }
 </style>

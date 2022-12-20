@@ -61,6 +61,10 @@ export default {
   align-items: flex-end;
   flex: 0 1 50%;
 }
+.marketing__images-container {
+  width: 100%;
+  object-fit: cover;
+}
 .marketing__images-image1 {
   position: relative;
   z-index: 2;

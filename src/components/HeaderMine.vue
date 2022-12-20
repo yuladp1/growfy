@@ -122,11 +122,12 @@ export default {
   color: #ffffff;
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
-  border-radius: 50px;
   padding: 0 10px;
 }
 .menu__link:hover {
-  box-shadow: 0px 0px 0px 0px white, 0 0 10px 4px white;
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(235, 240, 244, 0.2) inset;
+  -moz-box-shadow: 0px 5px 10px 2px rgba(235, 240, 244, 0.2) inset;
+  box-shadow: 0px 5px 10px 2px rgba(235, 240, 244, 0.2) inset;
 }
 
 .dropdown-nav {
@@ -142,7 +143,6 @@ export default {
   overflow: auto;
   background: rgba(0, 0, 0, 0.8);
   z-index: 1;
-  border-radius: 10%;
   font-weight: 500;
   height: 100vh;
   padding-top: 30px;
@@ -152,6 +152,11 @@ export default {
   color: white;
   font-size: 1.4rem;
   padding: 10px;
+}
+.dropdown-nav-link:hover {
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(235, 240, 244, 0.2) inset;
+  -moz-box-shadow: 0px 5px 10px 2px rgba(235, 240, 244, 0.2) inset;
+  box-shadow: 0px 5px 10px 2px rgba(235, 240, 244, 0.2) inset;
 }
 .cart {
   display: flex;

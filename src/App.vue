@@ -7,6 +7,8 @@
     <SectionMarketing />
     <SectionStatistics />
     <SectionFeedback />
+    <SectionNews />
+    <SectionStart />
   </div>
 </template>
 
@@ -18,6 +20,8 @@ import SectionServices from "./components/SectionServices.vue";
 import SectionMarketing from "./components/SectionMarketing.vue";
 import SectionStatistics from "./components/SectionStatistics.vue";
 import SectionFeedback from "./components/SectionFeedback.vue";
+import SectionNews from "./components/SectionNews.vue";
+import SectionStart from "./components/SectionNews.vue";
 export default {
   name: "App",
   components: {
@@ -28,6 +32,8 @@ export default {
     SectionMarketing,
     SectionStatistics,
     SectionFeedback,
+    SectionNews,
+    SectionStart,
   },
 };
 </script>
