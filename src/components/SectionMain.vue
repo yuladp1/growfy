@@ -151,10 +151,5 @@ export default {
     column-gap: 10px;
     margin: 0 auto;
   }
-  .page__main-content-buttons a {
-    font-size: 1.3rem;
-    padding: 8px 20px;
-    letter-spacing: 0.1px;
-  }
 }
 </style>

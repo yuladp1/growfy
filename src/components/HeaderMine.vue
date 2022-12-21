@@ -152,6 +152,7 @@ export default {
   color: white;
   font-size: 1.4rem;
   padding: 10px;
+  width: 100%;
 }
 .dropdown-nav-link:hover {
   -webkit-box-shadow: 0px 5px 10px 2px rgba(235, 240, 244, 0.2) inset;
