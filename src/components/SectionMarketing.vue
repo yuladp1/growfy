@@ -37,18 +37,6 @@
   </section>
 </template>
 
-<script>
-export default {
-  name: "SectionMarketing",
-  created() {},
-  data() {
-    return {};
-  },
-  props: {},
-  methods: {},
-};
-</script>
-
 <style>
 .marketing {
   padding: 175px 0 192px 0;

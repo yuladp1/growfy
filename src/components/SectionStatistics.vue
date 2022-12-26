@@ -41,19 +41,6 @@
     </div>
   </section>
 </template>
-
-<script>
-export default {
-  name: "SectionStatistics",
-  created() {},
-  data() {
-    return {};
-  },
-  props: {},
-  methods: {},
-};
-</script>
-
 <style>
 .statistics__wrapper {
   display: flex;

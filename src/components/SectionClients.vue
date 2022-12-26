@@ -22,19 +22,6 @@
     </div>
   </section>
 </template>
-
-<script>
-export default {
-  name: "SectionClients",
-  created() {},
-  data() {
-    return {};
-  },
-  props: {},
-  methods: {},
-};
-</script>
-
 <style>
 .page__clients {
   padding: 192px 0 160px 0;

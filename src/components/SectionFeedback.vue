@@ -88,18 +88,6 @@
   </section>
 </template>
 
-<script>
-export default {
-  name: "SectionFeedback",
-  created() {},
-  data() {
-    return {};
-  },
-  props: {},
-  methods: {},
-};
-</script>
-
 <style>
 .page__feedback {
   padding-bottom: 96px;

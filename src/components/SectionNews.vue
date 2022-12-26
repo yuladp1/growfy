@@ -68,18 +68,6 @@
   </section>
 </template>
 
-<script>
-export default {
-  name: "SectionNews",
-  created() {},
-  data() {
-    return {};
-  },
-  props: {},
-  methods: {},
-};
-</script>
-
 <style>
 .page__news {
   padding: 96px 0 96px 0;

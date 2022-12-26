@@ -61,18 +61,6 @@
   </section>
 </template>
 
-<script>
-export default {
-  name: "SectionServices",
-  created() {},
-  data() {
-    return {};
-  },
-  props: {},
-  methods: {},
-};
-</script>
-
 <style>
 .services__container {
   display: flex;

@@ -45,18 +45,6 @@
   </section>
 </template>
 
-<script>
-export default {
-  name: "SectionMine",
-  created() {},
-  data() {
-    return {};
-  },
-  props: {},
-  methods: {},
-};
-</script>
-
 <style>
 .page__main {
   margin-top: 160px;

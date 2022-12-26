@@ -15,18 +15,6 @@
   </section>
 </template>
 
-<script>
-export default {
-  name: "SectionStart",
-  created() {},
-  data() {
-    return {};
-  },
-  props: {},
-  methods: {},
-};
-</script>
-
 <style>
 .page__start {
   width: 100%;

@@ -56,18 +56,6 @@
   </footer>
 </template>
 
-<script>
-export default {
-  name: "PageFooter",
-  created() {},
-  data() {
-    return {};
-  },
-  props: {},
-  methods: {},
-};
-</script>
-
 <style>
 footer {
   margin-top: 160px;
@@ -95,8 +83,6 @@ footer {
 .footer__menu1-icons {
   display: flex;
   gap: 16px;
-}
-.footer__menu1-icons > a > img:hover {
 }
 .footer__menu-list {
   display: flex;
