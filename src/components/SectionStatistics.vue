@@ -92,4 +92,18 @@
     width: 50%;
   }
 }
+@media (max-width: 460px) {
+  .statistics__items {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    flex: 0 1 100%;
+  }
+  .statistics__items-column {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    flex: 0 1 100%;
+  }
+}
 </style>

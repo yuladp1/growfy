@@ -206,4 +206,11 @@ export default {
     overflow: hidden;
   }
 }
+
+@media (max-width: 375px) {
+  .header__container > .header__button {
+    font-size: 10px;
+    padding: 16px 10px;
+  }
+}
 </style>

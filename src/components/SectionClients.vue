@@ -33,7 +33,6 @@
   letter-spacing: 1px;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 24px;
 }
 .clients__items {
   display: flex;
@@ -44,6 +43,7 @@
 .clients__item {
   flex: 0 1 20%;
   min-width: 210px;
+  margin-top: 24px;
 }
 @media (max-width: 991.98px) {
   .page__clients {
