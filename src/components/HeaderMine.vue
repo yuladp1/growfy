@@ -23,7 +23,16 @@
         <span class="cart__amount">0</span>
       </div>
       <a class="header__button button" href="">Get started</a>
-      <div class="icon" v-on:click="toggleMobileNav" v-show="mobileNav"></div>
+      <div
+        class="icon icon-open"
+        v-on:click="toggleMobileNav"
+        v-show="mobileNav && !isBurgerClicked"
+      ></div>
+      <div
+        class="icon icon-close"
+        v-on:click="toggleMobileNav"
+        v-show="mobileNav && isBurgerClicked"
+      ></div>
     </div>
 
     <transition name="slide-fade">
@@ -75,11 +84,17 @@ export default {
 
 <style>
 /*-----Header-----*/
-.icon {
-  background-image: url("../assets/burger-menu.png");
+.icon-open,
+.icon-close {
   width: 30px;
   height: 30px;
   background-size: cover;
+}
+.icon-open {
+  background-image: url("../assets/burger-menu.png");
+}
+.icon-close {
+  background-image: url("../assets/close-button.png");
 }
 .icon-mobile-view {
   display: flex;
