@@ -43,6 +43,7 @@
 }
 .marketing__wrapper {
   display: flex;
+  align-items: flex-start;
 }
 .marketing__images {
   display: flex;
@@ -51,9 +52,9 @@
 }
 .marketing__images-container {
   width: 100%;
-  object-fit: cover;
 }
 .marketing__images-image1 {
+  width: 100%;
   position: relative;
   z-index: 2;
 }
@@ -69,7 +70,6 @@
   padding-left: 64px;
   display: flex;
   flex-direction: column;
-  align-items: left;
   align-self: center;
   flex: 0 1 50%;
 }
@@ -108,6 +108,9 @@
   }
   .marketing {
     padding: 100px 0 100px 0;
+  }
+  .marketing__content {
+    padding-left: 0;
   }
 }
 </style>

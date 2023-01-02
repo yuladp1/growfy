@@ -45,6 +45,40 @@ export default {
 @import url("./normalize.css");
 @import url(https://fonts.googleapis.com/css?family=Poppins:300,regular,500&display=swap);
 
+/*--------- transitions -----------*/
+/*---------------------------- dropdown-menu ---transition--------*/
+.slide-fade-enter-active {
+  transition: all 0.6s ease;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  opacity: 0;
+  transform: scale(0.5) translate(50%, -50%);
+}
+/*---------------------------- from-left  ---transition--------*/
+.fade-enter-active {
+  transition: opacity 3s ease, transform 1s ease;
+}
+.fade-enter-from {
+  opacity: 0;
+  transform: translate(-30%);
+}
+/*------------------------------------------------------*/
+/*---------------------------- images ---transition--------*/
+.images-fade-enter-active {
+  transition: opacity 3s ease, transform 1s ease;
+}
+.images-fade-enter-from {
+  opacity: 0;
+  transform: scale(0, 1);
+}
+/*------------------------------------------------------*/
+
 html,
 body {
   height: 100%;

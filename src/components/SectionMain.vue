@@ -1,46 +1,50 @@
 <template>
   <section class="page__main">
     <div class="page__main-wrapper _container">
-      <div class="page__main-content">
-        <div class="page__main-content-title content-title">
-          Marketing solutions that grow your business.
+      <transition name="fade" appear>
+        <div class="page__main-content">
+          <div class="page__main-content-title content-title">
+            Marketing solutions that grow your business.
+          </div>
+          <div class="page__main-content-text content-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, suspendisse varius
+            enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros
+            dolor.
+          </div>
+          <div class="page__main-content-buttons">
+            <a href="" class="button">Our services</a>
+            <a href="" class="button button-dark">Contact us</a>
+          </div>
         </div>
-        <div class="page__main-content-text content-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, suspendisse varius enim
-          in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor.
+      </transition>
+      <transition name="images-fade" appear>
+        <div class="page__main-images">
+          <div class="page__main-images-column">
+            <img
+              class="page__main-images-image1"
+              src="../assets/main-images/1.jpg"
+              alt=""
+            />
+            <img
+              class="page__main-images-image2"
+              src="../assets/main-images/2.jpg"
+              alt=""
+            />
+          </div>
+          <div class="page__main-images-column">
+            <img
+              class="page__main-images-image3"
+              src="../assets/main-images/3.jpg"
+              alt=""
+            />
+            <img
+              class="page__main-images-image4"
+              src="../assets/main-images/4.jpg"
+              alt=""
+            />
+          </div>
         </div>
-        <div class="page__main-content-buttons">
-          <a href="" class="button">Our services</a>
-          <a href="" class="button button-dark">Contact us</a>
-        </div>
-      </div>
-
-      <div class="page__main-images">
-        <div class="page__main-images-column">
-          <img
-            class="page__main-images-image1"
-            src="../assets/main-images/1.jpg"
-            alt=""
-          />
-          <img
-            class="page__main-images-image2"
-            src="../assets/main-images/2.jpg"
-            alt=""
-          />
-        </div>
-        <div class="page__main-images-column">
-          <img
-            class="page__main-images-image3"
-            src="../assets/main-images/3.jpg"
-            alt=""
-          />
-          <img
-            class="page__main-images-image4"
-            src="../assets/main-images/4.jpg"
-            alt=""
-          />
-        </div>
-      </div>
+      </transition>
     </div>
   </section>
 </template>
@@ -136,8 +140,17 @@
 }
 @media (max-width: 400px) {
   .page__main-content-buttons {
-    column-gap: 10px;
+    gap: 20px;
     margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  .page__main-content-buttons > a {
+    flex: 0 1 100%;
+    text-align: center;
+  }
+  .services__content > a {
+    width: 100%;
+    text-align: center;
   }
 }
 </style>

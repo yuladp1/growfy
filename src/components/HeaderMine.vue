@@ -7,14 +7,16 @@
       <a class="header__logo"
         ><img src="../assets/logo.svg" alt="growfy-logo" class="" />
       </a>
-      <nav class="header__menu menu">
-        <ul class="menu__list" v-show="!mobileNav">
-          <li class="menu__item"><a href="" class="menu__link">Home</a></li>
-          <li class="menu__item"><a href="" class="menu__link">Product</a></li>
-          <li class="menu__item"><a href="" class="menu__link">Pricing</a></li>
-          <li class="menu__item"><a href="" class="menu__link">Contact</a></li>
-        </ul>
-      </nav>
+      <transition name="slide-fade" appear>
+        <nav class="header__menu menu">
+          <ul class="menu__list" v-show="!mobileNav">
+            <li class="menu__item"><a href="" class="menu__link">Home</a></li>
+            <li class="menu__item"><a href="" class="menu__link">Product</a></li>
+            <li class="menu__item"><a href="" class="menu__link">Pricing</a></li>
+            <li class="menu__item"><a href="" class="menu__link">Contact</a></li>
+          </ul>
+        </nav>
+      </transition>
 
       <div class="header__cart cart">
         <span class="cart__text">Cart</span>
@@ -24,12 +26,14 @@
       <div class="icon" v-on:click="toggleMobileNav" v-show="mobileNav"></div>
     </div>
 
-    <ul class="dropdown-nav" v-show="isBurgerClicked">
-      <li class="dropdown-nav-link">Home</li>
-      <li class="dropdown-nav-link">Product</li>
-      <li class="dropdown-nav-link">Pricing</li>
-      <li class="dropdown-nav-link">Services</li>
-    </ul>
+    <transition name="slide-fade">
+      <ul class="dropdown-nav" v-show="isBurgerClicked">
+        <li class="dropdown-nav-link">Home</li>
+        <li class="dropdown-nav-link">Product</li>
+        <li class="dropdown-nav-link">Pricing</li>
+        <li class="dropdown-nav-link">Services</li>
+      </ul></transition
+    >
   </header>
 </template>
 
@@ -134,25 +138,25 @@ export default {
   margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   align-content: space-around;
   position: fixed;
-  width: 120px;
+  width: 100%;
   top: 90px;
-  right: 10px;
   overflow: auto;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.93);
   z-index: 1;
   font-weight: 500;
-  height: 100vh;
+  height: 50vh;
   padding-top: 30px;
   margin-top: 25px;
 }
 .dropdown-nav-link {
   color: white;
-  font-size: 1.4rem;
-  padding: 10px;
+  font-size: 2rem;
+  padding: 20px;
   width: 100%;
+  text-align: center;
 }
 .dropdown-nav-link:hover {
   -webkit-box-shadow: 0px 5px 10px 2px rgba(235, 240, 244, 0.2) inset;

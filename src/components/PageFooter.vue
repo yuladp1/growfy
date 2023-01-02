@@ -161,5 +161,10 @@ footer {
   .footer__buttons {
     flex-wrap: wrap;
   }
+  .start__buttons > a,
+  .footer__buttons > a {
+    flex: 0 1 100%;
+    text-align: center;
+  }
 }
 </style>
