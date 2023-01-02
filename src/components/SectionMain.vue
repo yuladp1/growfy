@@ -48,6 +48,11 @@
     </div>
   </section>
 </template>
+<script>
+export default {
+  name: "SectionMain",
+};
+</script>
 
 <style>
 .page__main {

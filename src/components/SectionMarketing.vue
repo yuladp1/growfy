@@ -36,6 +36,11 @@
     </div>
   </section>
 </template>
+<script>
+export default {
+  name: "SectionMarketing",
+};
+</script>
 
 <style>
 .marketing {

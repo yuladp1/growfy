@@ -67,6 +67,11 @@
     </div>
   </section>
 </template>
+<script>
+export default {
+  name: "SectionNews",
+};
+</script>
 
 <style>
 .page__news {

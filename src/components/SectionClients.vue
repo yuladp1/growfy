@@ -22,6 +22,13 @@
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  name: "SectionClients",
+};
+</script>
+
 <style>
 .page__clients {
   padding: 192px 0 160px 0;

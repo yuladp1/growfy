@@ -56,6 +56,11 @@
   </footer>
 </template>
 
+<script>
+export default {
+  name: "PageFooter",
+};
+</script>
 <style>
 footer {
   margin-top: 160px;

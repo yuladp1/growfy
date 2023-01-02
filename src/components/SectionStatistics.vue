@@ -41,6 +41,13 @@
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  name: "SectionStatistics",
+};
+</script>
+
 <style>
 .statistics__wrapper {
   display: flex;

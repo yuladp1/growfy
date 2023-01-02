@@ -60,6 +60,11 @@
     </div>
   </section>
 </template>
+<script>
+export default {
+  name: "SectionServices",
+};
+</script>
 
 <style>
 .services__container {

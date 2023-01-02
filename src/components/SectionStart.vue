@@ -15,6 +15,11 @@
   </section>
 </template>
 
+<script>
+export default {
+  name: "SectionStart",
+};
+</script>
 <style>
 .page__start {
   width: 100%;

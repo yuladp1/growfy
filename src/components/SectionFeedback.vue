@@ -87,6 +87,11 @@
     </div>
   </section>
 </template>
+<script>
+export default {
+  name: "SectionFeedback",
+};
+</script>
 
 <style>
 .page__feedback {
